@@ -17,7 +17,7 @@ ASPV.validate = METHOD(function(m) {
 				client = new apiVerifier(NODE_CONFIG.ASPV.sharedSecretKey);
 			}
 			
-			client.verifyReceipt(receipt, callback);
+			client.verifyReceipt(receipt, true, callback);
 		}
 	};
 });
