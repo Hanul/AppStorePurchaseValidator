@@ -1,1 +1,1 @@
-ASPV.validate=METHOD(function(e){var r,i=require("iap_verifier");return{run:function(e,n){void 0===r&&(r=new i(NODE_CONFIG.ASPV.sharedSecretKey)),r.verifyReceipt(e,!0,n)}}});
+ASPV.validate=METHOD(function(e){var i,r=require("iap_verifier");return{run:function(e,t){var c=e.productId,n=e.receipt;void 0===i&&(i=new r(NODE_CONFIG.ASPV.sharedSecretKey)),i.verifyReceipt(n,!0,function(e,i,r){var n=!1;e===!0&&void 0!==r.receipt&&(r.receipt.product_id===c?n=!0:void 0!==r.receipt.in_app&&EACH(r.receipt.in_app,function(e){return e.product_id===c?(n=!0,!1):void 0})),t(n)})}}});
