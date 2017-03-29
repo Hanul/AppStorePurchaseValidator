@@ -1,5 +1,3 @@
-*AppStorePurchaseValidator가 [UIAP](https://github.com/Hanul/UIAP)로 통합되었습니다.*
-
 # AppStorePurchaseValidator
 앱스토어 결제 검증 BOX
 
